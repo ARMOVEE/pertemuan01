@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Login</title>
+  <!-- Link to local Bootstrap CSS installed via npm -->
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f7f6;
+    }
+    
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+
+    .navbar-brand img {
+      max-height: 40px;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      background-color: #ffffff;
+    }
+
+    .login-logo {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 120px;
+      object-fit: contain;
+    }
+
+    .form-title {
+      font-weight: 600;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Ganti src dengan path gambar logo untuk navbar -->
+    <a class="navbar-brand" href="#">
+      <img src="image/logo.jpeg" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- ms-auto digunakan untuk mendorong menu ke kanan -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Masuk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Register</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Bahasa
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Bahasa Indonesia</a></li>
+            <li><a class="dropdown-item" href="#">Inggris</a></li>
+            <li><a class="dropdown-item" href="#">Jepang</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content: Form Login -->
+<div class="container">
+  <div class="login-container">
+    <!-- Ganti src dengan path gambar yang ada di folder image Anda -->
+    <img src="image/lock.jpeg" alt="Welcome Image" class="login-logo">
+    
+    <h4 class="text-center form-title mb-4">Selamat Datang</h4>
+    
+    <form action="home.html" method="get">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Masukkan username Anda" required>
+      </div>
+      <div class="mb-4">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Masukkan password Anda" required>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Link to local Bootstrap JS installed via npm -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
